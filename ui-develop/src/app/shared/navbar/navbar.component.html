@@ -1,0 +1,52 @@
+<mat-toolbar class="nav">
+  <div class="content-container">
+    <a routerLink="" routerLinkActive="active">
+      <div class="left-container">
+        <div class="pixel-logo-outer">
+          <div class="pixel-logo-flash"></div>
+          <div class="pixel-logo-inner"></div>
+        </div>
+        <div class="pixelgram-title">{{ title }}</div>
+      </div>
+    </a>
+
+    <div class="center-container" *ngIf="show">
+      <input
+        class="searchbar-field"
+        type="text"
+        placeholder="&#xF002; Search"
+        style="font-family: roboto, FontAwesome, serif"
+      />
+    </div>
+    <div class="right-container">
+      <div id="right-nav-stuff">
+        <img
+          *ngIf="isLoggedIn"
+          class="add-post"
+          alt="add post"
+          src="../../../assets/post-pic.png"
+        />
+      </div>
+      <div class="dropdown" id="right-nav-stuff" *ngIf="show">
+        <img
+          class="user-pic"
+          alt="user login"
+          src="../../../assets/user-pic.PNG"
+        />
+        <div class="dropdown-content">
+          <a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active"
+            >Login</a
+          >
+          <a
+            *ngIf="isLoggedIn"
+            routerLink="/"
+            routerLinkActive="active"
+            (click)="logout()"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

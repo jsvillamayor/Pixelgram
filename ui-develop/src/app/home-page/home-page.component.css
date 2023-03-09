@@ -1,0 +1,9 @@
+.body-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-post{
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,38 @@
+<mat-card class="container">
+    <div class="above-image-container">
+        <div class="user-profile-img-name-container">
+            <img class="user-image-placeholder" src={{postData.user.profileimg}} onerror="this.src='https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg'">
+            <div class="post-author">{{postData.user.username}}</div>
+        </div>
+            <span class="material-symbols-outlined horiz">
+                more_horiz <!--google icon more horiz-->
+            </span>
+    </div>
+    
+    <div class="image-container">
+        <img class="postImage" src={{postData.img}}>
+    </div>
+
+    <div class="post-stat-container">
+        <span class="material-symbols-outlined favorite">
+            favorite <!--google icon search favorite for other styling-->
+            </span>
+        <div class="numberOfLikes">13 likes</div>
+        <div class="numberOfComments">{{postData.comments.totalElements}}  comments</div>
+    </div>
+    
+    <div class="post-words-container">
+        <div class="description-container">
+            <div class="description-author"><span class="bold">{{postData.user.username}}</span> {{postData!.description}}</div>
+        </div>
+        <div class="moreComments-container" *ngIf="postData.comments.totalElements > 0">
+            <button class="moreComments" *ngIf="postData.comments.hasNext" (click)="getComments()">View more comments</button>
+        </div>
+        
+        <div class="comment-container">
+            <div *ngFor="let data of  postData.comments.items " >
+                <div class="commentAuthor"><span class="bold">{{data.username}}</span> {{data.body}}</div>
+            </div>
+        </div>
+    </div>
+</mat-card>

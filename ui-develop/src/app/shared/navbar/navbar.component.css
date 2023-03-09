@@ -1,0 +1,148 @@
+@import url("http://fonts.cdnfonts.com/css/billabong");
+.nav {
+  width: 100%;
+  background-color: #ffffff;
+  height: 5rem;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.09);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+
+/*left content*/
+.left-container {
+  display: flex;
+}
+
+.pixelgram-title {
+  font-family: "Billabong", sans-serif;
+  font-size: 1.66rem;
+  font-weight: 400;
+  padding-left: 1.05rem;
+  border-left: 0.5px solid #2a2a2a;
+  margin-left: 0.5rem;
+}
+
+.pixelgram-title:hover {
+  cursor: pointer;
+}
+
+/* square is NOT an image */
+
+.pixel-logo-outer {
+  margin-right: 1rem;
+  border: 3px solid #262626;
+  height: 1.6rem;
+  width: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.pixel-logo-inner {
+  align-self: center;
+  border: 3px solid #262626;
+  margin-top: 1px;
+  height: 0.45rem;
+  width: 0.45rem;
+  background-color: #262626;
+}
+.pixel-logo-flash {
+  height: 4px;
+  width: 4px;
+  margin-top: 1px;
+  margin-right: 1px;
+  background-color: black;
+}
+
+.pixel-logo-inner:hover {
+  cursor: pointer;
+}
+
+.pixel-logo-outer:hover {
+  cursor: pointer;
+}
+
+/*center content*/
+.center-container {
+  margin-right: 95px;
+}
+.searchbar-field {
+  height: 1.7rem;
+  width: 14rem;
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  text-align: center;
+}
+::placeholder {
+  color: #999999;
+  font-weight: 300;
+}
+
+/* right content*/
+.right-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+.user-pic {
+  padding-top: 5px;
+  height: 1.46rem;
+  width: 1.6rem;
+}
+
+.user-pic:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  float: right;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 80px;
+  padding: 5px 10px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-width: 0.01rem;
+  left: -80px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited :focus :active {
+  color: black;
+}
+
+.dropdown-content a {
+  font-size: 15px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.add-post {
+  padding-top: 5px;
+  height: 1.46rem;
+  width: 1.6rem;
+}
+
+.add-post:hover {
+  cursor: pointer;
+}
+
+#right-nav-stuff {
+  float: left;
+}

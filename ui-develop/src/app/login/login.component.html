@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="body-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="flex-container">
+      <div class="center-container">
+        <div class="pixel-logo-outer">
+          <div class="pixel-logo-flash"></div>
+          <div class="pixel-logo-inner"></div>
+        </div>
+      </div>
+      <div class="pixelgram-title">Login</div>
+    </div>
+
+    <input
+      type="text"
+      placeholder="Username..."
+      id="username"
+      formControlName="username"
+      class="form-input"
+    />
+    <div class="smallfield">
+      <small
+        *ngIf="(loginForm.get('username')?.touched && loginForm.get('username')?.errors?.['required']) || ((loginBtnIsPressed == true && loginForm.get('username')?.errors?.['required']))"
+        >* Username is required</small
+      >
+    </div>
+
+    <input
+      type="password"
+      placeholder="Password..."
+      id="username"
+      formControlName="password"
+      class="form-input"
+    />
+    <div class="smallfield">
+      <small
+        *ngIf="(loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']) || (loginBtnIsPressed == true && loginForm.get('password')?.errors?.['required'])"
+        >* Password is required</small
+      >
+    </div>
+
+    <div class="smallfield">
+      <small *ngIf="invalidCredentials"
+        >* Username or password is incorrect</small
+      >
+    </div>
+    <div class="form-btns">
+
+      <a routerLink="/register" routerLinkActive="active" class="register"
+        >Register</a
+      >
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>

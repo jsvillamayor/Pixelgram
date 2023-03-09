@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="body-container"
+    infinite-scroll
+    [infiniteScrollDistance]= 1
+    [infiniteScrollThrottle]= 500
+    (scrolled)="onScroll()"
+>
+    <div *ngFor="let data of  posts " > <!--mockdata instead of posts for local-->
+
+        <app-post [postData]="data"></app-post>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+

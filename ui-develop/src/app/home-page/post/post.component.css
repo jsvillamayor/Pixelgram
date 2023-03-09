@@ -1,0 +1,142 @@
+.container{
+    /*determines size of the each post*/
+    width: 614px;
+   
+}
+
+.bold{
+    font-weight: 500;
+}
+
+
+
+.mat-card{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+}
+/*above image container */
+.above-image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.user-image-placeholder{
+    border-radius: 100%;
+    height:35px;
+    width:35px;
+    margin: 0.6rem;
+    padding: 5px;
+}
+
+.user-image-placeholder:hover{
+    cursor: pointer;
+}
+
+.post-author{
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.horiz{
+    border-radius:  5px;
+    margin-top:1.4rem;
+    margin-right: 0.3rem;
+    height: 1.66rem;
+    width: 1.66rem;
+    padding-right:0.2rem;
+    padding-left:0.2rem;
+    font-weight: 800;
+}
+
+.horiz:hover{
+    background-color: #ABABAB;
+    cursor: pointer;
+}
+
+/*image container*/
+.image-container{
+    width: 100%;
+    height: 614px; 
+    margin: 0;
+ }
+.postImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*post stat container */
+.post-stat-container{
+    display:flex;
+    flex-direction: row;
+    padding:0 1rem;
+    padding-top: 0.8rem;
+}
+
+.numberOfLikes{
+    padding: 0.2rem;
+    color: #ABABAB;
+}
+
+.numberOfComments{
+    padding: 0.2rem;
+    color: #ABABAB;
+}
+
+/* post words container*/
+.post-words-container{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.description-container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile-img-name-container{
+    display:flex;
+    flex-direction: row;
+}
+
+.user-profile-img-name-container:hover{
+    cursor:pointer;
+}
+
+.link-view{
+    color:#ABABAB;
+    text-decoration: none;
+    
+    padding: 0.2rem 1rem;
+}
+
+.comment-container{
+    padding: 0.2rem 1rem;
+}
+
+.commentAuthor{
+    /* spacing between author */
+    padding-bottom: 0.35rem;
+}
+
+.moreComments-container{
+    height:1rem;
+}
+
+.moreComments{
+    background: none;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: gray;
+}

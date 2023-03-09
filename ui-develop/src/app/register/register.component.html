@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="body-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="flex-container">
+      <div class="center-container">
+        <div class="pixel-logo-outer">
+          <div class="pixel-logo-flash"></div>
+          <div class="pixel-logo-inner"></div>
+        </div>
+      </div>
+      <div class="pixelgram-title">Register</div>
+    </div>
+
+    <input
+      type="text"
+      placeholder="Username..."
+      id="username"
+      formControlName="username"
+      class="form-input"
+    />
+    <div class="smallfield">
+      <small
+        *ngIf="(registerForm.get('username')?.touched && registerForm.get('username')?.errors?.['required']) || (registerBtnIsPressed == true && registerForm.get('username')?.errors?.['required'])"
+        >* Username is required</small
+      >
+    </div>
+
+    <input
+      type="password"
+      placeholder="Password..."
+      id="password"
+      formControlName="password"
+      class="form-input"
+    />
+    <div class="smallfield">
+      <small
+        *ngIf="(registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['required']) || (registerBtnIsPressed == true && registerForm.get('password')?.errors?.['required'])"
+        >* Password is required</small
+      >
+    </div>
+
+    <div class="smallfield">
+      <small *ngIf="usernameTaken">* Username already exists and is taken</small>
+    </div>
+    <div class="form-btns">
+      <button type="submit">Register</button>
+    </div>
+  </form>
+</div>
